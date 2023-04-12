@@ -1,0 +1,22 @@
+public class Kata
+{
+  public static String reverseWords(final String original)
+  {String s="";
+   if(!original.trim().isEmpty()){
+   String [] array = original.split(" ");
+   for(int i = 0; i<array.length; i++){
+     char[] chars = array[i].toCharArray();
+     String word ="";
+     for(int j = chars.length-1; j>=0; j--){
+       word=word+chars[j];
+     }
+     array[i]=word+" ";
+   }
+   for(int i = 0; i<array.length; i++){
+     s=s+array[i];
+   }
+   String result = s.trim();
+   return result;}
+   else{return original;}
+  }
+}
